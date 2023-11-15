@@ -1,0 +1,14 @@
+# these commands define a cone source with 
+#- focal spot of 5 um FWHM (sigma=2.12 um)
+#- cone aperture of 0.006 rad
+#- position of -85 cm along z axis (the default for detector position is + 15 cm)
+/gps/ene/type User
+/gps/hist/type energy
+/gps/particle gamma
+/gps/pos/type Beam
+/gps/pos/shape Circle
+/gps/pos/sigma_r 2.12314225053 um
+/gps/pos/centre 0 0. -85 cm
+/gps/ang/type iso
+/gps/ang/maxtheta 0.006 rad
+/gps/ang/rot1 -1 0 0

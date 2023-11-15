@@ -1,0 +1,23 @@
+# these commands define
+# - the source positon (- 85 cm)
+# - the source to object distance (50 cm)
+# - the object to detector distance (50 cm)
+# - the mask thickness (250 um)
+# - the detector's mask pitch (62 um, pixel pitch 62 um)
+# - the detector's mask aperture (15 um)
+# - the acquisition type (doublemask, singlemask, conventional)
+# - the detector type (0COL -> ideal photon counting, 1COL -> 1 threshold, 2COL -> 2 thresholds)
+# - the thershold 1 (10 keV)
+# - the threshold 2 (30 keV)
+/Pepi/det/setBidimensional true
+/Pepi/det/setSourcePosZ -85 cm
+/Pepi/det/setSrcObjDistance 50 cm
+/Pepi/det/setObjectDetDistance 50 cm
+/Pepi/det/setMaskThickness 250 um
+/Pepi/det/setM2Pitch 62 um
+/Pepi/det/setM2Aperture 15 um
+#/Pepi/det/setRotAngle 0 deg
+/Pepi/det/setAcquisitionType doublemask
+/Pepi/det/setDetType 1COL
+/Pepi/det/setThreshold1 10 keV
+/Pepi/det/setThreshold2 30 keV

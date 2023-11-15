@@ -1,0 +1,39 @@
+# Macro file for the initialization of example B1
+# in interactive session
+#
+##################### G4State_PreInit ###################
+
+# ================== Verbose settings ==================
+
+# Set some default verbose
+/control/verbose 0
+/control/saveHistory
+/run/verbose 0
+
+# ================== Running settings ==================
+
+# Change the default number of threads (in multi-threaded mode)
+#/run/numberOfThreads 4
+/run/printProgress 1000000
+
+# ================== Geometry settings ==================
+
+/control/execute detmask_config.in
+/Pepi/cont/loadConfig geometry_config.in
+
+# ================== Readout settings ==================
+
+/Pepi/cont/setBaseName image_
+
+################## Kernel initialization ################
+
+/run/initialize
+
+#####################  G4State_Idle #####################
+
+# ================== Setup settings ==================
+
+/control/execute gps.in
+/control/execute spectra/40kV42deg1Air0.5Be0.5Al.in
+
+/Pepi/cont/beamOn 300000000
